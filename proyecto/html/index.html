@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis Estadístico del Consumo de Medios en Jóvenes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="background-grid"></div>
+    <div class="background-glow glow-a"></div>
+    <div class="background-glow glow-b"></div>
+    <div class="background-glow glow-c"></div>
+    <div class="light-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <header class="hud-header">
+      <div class="header-tag">P3R DATA SCREEN</div>
+      <h1>ANÁLISIS ESTADÍSTICO DEL CONSUMO DE MEDIOS EN JÓVENES</h1>
+      <div class="header-line"></div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar glass-panel">
+        <div class="sidebar-top">
+          <div class="system-badge">31<br><span>STUDENTS</span></div>
+          <div class="sidebar-copy">
+            <p>PAUSE MENU</p>
+            <h2>MEDIA REPORT</h2>
+          </div>
+        </div>
+
+        <nav class="menu" aria-label="Secciones principales">
+          <button class="menu-item active" data-section="dashboard"><span class="menu-index">01</span><span class="menu-text">Dashboard</span></button>
+          <button class="menu-item" data-section="graficos"><span class="menu-index">02</span><span class="menu-text">Gráficos</span></button>
+          <button class="menu-item" data-section="porcentajes"><span class="menu-index">03</span><span class="menu-text">Porcentajes</span></button>
+          <button class="menu-item" data-section="conclusiones"><span class="menu-index">04</span><span class="menu-text">Conclusiones</span></button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="footer-line"></div>
+          <p>HUD / JRPG FUTURISTA</p>
+        </div>
+      </aside>
+
+      <section class="content">
+        <article class="content-panel glass-panel active" id="dashboard">
+          <div class="panel-heading">
+            <span class="panel-label">SECTION 01</span>
+            <h2>Dashboard General</h2>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card reveal-card">
+              <p class="stat-label">Total estudiantes</p>
+              <h3 class="counter" data-target="31">0</h3>
+              <span class="stat-detail">Muestra total registrada</span>
+            </div>
+            <div class="stat-card reveal-card">
+              <p class="stat-label">No se informan</p>
+              <h3 class="counter" data-target="64.52" data-suffix="%">0</h3>
+              <span class="stat-detail">20 de 31 estudiantes</span>
+            </div>
+            <div class="stat-card reveal-card">
+              <p class="stat-label">Sí se informan</p>
+              <h3 class="counter" data-target="35.48" data-suffix="%">0</h3>
+              <span class="stat-detail">11 de 31 estudiantes</span>
+            </div>
+            <div class="stat-card reveal-card">
+              <p class="stat-label">Moda</p>
+              <h3 class="text-value">Ninguno</h3>
+              <span class="stat-detail">Tendencia dominante</span>
+            </div>
+          </div>
+
+          <div class="dashboard-bottom">
+            <div class="info-card slanted-card">
+              <span class="mini-label">Resumen</span>
+              <p>La mayoría de estudiantes no sigue medios de información, lo que convierte la ausencia de consumo informativo en la categoría dominante.</p>
+            </div>
+            <div class="info-card slanted-card">
+              <span class="mini-label">Lectura rápida</span>
+              <p>Entre quienes sí consumen medios, la preferencia está dispersa y no existe un único canal con dominio absoluto entre los jóvenes consultados.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-panel glass-panel" id="graficos">
+          <div class="panel-heading">
+            <span class="panel-label">SECTION 02</span>
+            <h2>Gráficos Interactivos</h2>
+          </div>
+          <div class="charts-layout">
+            <div class="chart-card bar-card">
+              <div class="chart-head">
+                <span class="mini-label">Frecuencia por medio</span>
+                <h3>Gráfico de Barras</h3>
+              </div>
+              <div class="bar-chart" id="barChart"></div>
+            </div>
+            <div class="chart-card pie-card">
+              <div class="chart-head">
+                <span class="mini-label">Distribución general</span>
+                <h3>Gráfico Circular</h3>
+              </div>
+              <div class="donut-wrap">
+                <svg class="donut-chart" viewBox="0 0 220 220" aria-label="Distribución de estudiantes que se informan y no se informan">
+                  <defs>
+                    <linearGradient id="ringTrack" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"></stop>
+                      <stop offset="100%" stop-color="rgba(255,255,255,0.22)"></stop>
+                    </linearGradient>
+                    <linearGradient id="ringPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#9ae8ff"></stop>
+                      <stop offset="100%" stop-color="#00c8ff"></stop>
+                    </linearGradient>
+                    <linearGradient id="ringSecondary" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1f6fff"></stop>
+                      <stop offset="100%" stop-color="#8de6ff"></stop>
+                    </linearGradient>
+                  </defs>
+                  <circle class="donut-track" cx="110" cy="110" r="76"></circle>
+                  <circle class="donut-segment segment-a" cx="110" cy="110" r="76"></circle>
+                  <circle class="donut-segment segment-b" cx="110" cy="110" r="76"></circle>
+                </svg>
+                <div class="donut-center"><span>MEDIA</span><strong>31</strong><small>estudiantes</small></div>
+              </div>
+              <div class="legend">
+                <div class="legend-item"><span class="legend-dot dot-a"></span><p>No se informan <strong>64.52%</strong></p></div>
+                <div class="legend-item"><span class="legend-dot dot-b"></span><p>Sí se informan <strong>35.48%</strong></p></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-panel glass-panel" id="porcentajes">
+          <div class="panel-heading">
+            <span class="panel-label">SECTION 03</span>
+            <h2>Porcentajes y Frecuencias</h2>
+          </div>
+          <div class="percent-layout">
+            <div class="percent-card slanted-card emphasis-card">
+              <span class="mini-label">Porcentaje dominante</span>
+              <h3>64.52%</h3>
+              <p>Los estudiantes que no siguen ningún medio representan casi dos tercios de la muestra total.</p>
+            </div>
+            <div class="percent-card slanted-card">
+              <span class="mini-label">Participación activa</span>
+              <h3>35.48%</h3>
+              <p>Solo una minoría mantiene seguimiento de al menos un medio de información.</p>
+            </div>
+          </div>
+          <div class="frequency-board">
+            <div class="board-head">
+              <span class="mini-label">Registro detallado</span>
+              <h3>Frecuencias por medio</h3>
+            </div>
+            <div class="frequency-list">
+              <div class="frequency-item"><span>RTVC</span><strong>3</strong></div>
+              <div class="frequency-item"><span>Cambio</span><strong>3</strong></div>
+              <div class="frequency-item"><span>Juventud Med</span><strong>2</strong></div>
+              <div class="frequency-item"><span>BBC</span><strong>2</strong></div>
+              <div class="frequency-item"><span>El Espectador</span><strong>2</strong></div>
+              <div class="frequency-item"><span>Latinus</span><strong>1</strong></div>
+              <div class="frequency-item"><span>Política para políticos</span><strong>1</strong></div>
+              <div class="frequency-item"><span>La silla vacía</span><strong>1</strong></div>
+              <div class="frequency-item"><span>Telemundo</span><strong>1</strong></div>
+              <div class="frequency-item"><span>La Base</span><strong>1</strong></div>
+              <div class="frequency-item"><span>BW</span><strong>1</strong></div>
+              <div class="frequency-item"><span>El Colombiano</span><strong>1</strong></div>
+              <div class="frequency-item"><span>SIC Noticias</span><strong>1</strong></div>
+              <div class="frequency-item"><span>CNN</span><strong>1</strong></div>
+              <div class="frequency-item"><span>Telemedellín</span><strong>1</strong></div>
+              <div class="frequency-item"><span>Canal Uno</span><strong>1</strong></div>
+              <div class="frequency-item"><span>TeleAntioquia</span><strong>1</strong></div>
+              <div class="frequency-item"><span>Señal Colombia</span><strong>1</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-panel glass-panel" id="conclusiones">
+          <div class="panel-heading">
+            <span class="panel-label">SECTION 04</span>
+            <h2>Conclusiones</h2>
+          </div>
+          <div class="conclusion-stack">
+            <div class="conclusion-card slanted-card"><span class="mini-label">Hallazgo 01</span><p>El consumo de medios informativos es bajo: 20 de 31 estudiantes no siguen ningún medio, lo cual marca una desconexión significativa con las fuentes de información.</p></div>
+            <div class="conclusion-card slanted-card"><span class="mini-label">Hallazgo 02</span><p>Entre quienes sí se informan, las preferencias están fragmentadas. RTVC y Cambio encabezan con 3 menciones, seguidos por Juventud Med, BBC y El Espectador con 2.</p></div>
+            <div class="conclusion-card slanted-card"><span class="mini-label">Hallazgo 03</span><p>La moda “Ninguno” confirma que la ausencia de seguimiento mediático es la categoría más repetida, superando a cualquier medio específico dentro del grupo analizado.</p></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
